@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700;900&display=swap');
+@import url("https://fonts.google.com/specimen/Fraunces");
+
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+
+
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+$Mont: 'Montserrat', sans-serif;
+$Frau: 'Fraunces', sans-serif;
+
+$mobileSize: 375px;
+$desktopSize: 1440px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $cream;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+
+}
+
+h1 {
+    font-family: $Mont;
+    font-weight: 700;
+}
+
+p {
+    font-family: $Frau;
+    font-weight: 500;
+    color: $darkGrayishBlue;
+    line-height: 1.5rem;
+
+}
+
+.container {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 9px;
+    overflow: hidden;
+    width: 500px;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+img {
+    content: url(images/image-product-mobile.jpg);
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.spacing {
+    letter-spacing: 4px;
+    font-family: $Mont;
+    font-weight: 500;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    gap: 1rem;
+}
+
+button:hover {
+    background-color: $veryDarkBlue;
+}
+
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.big-price {
+    font-family: $Mont;
+    font-size: 2rem;
+    color: $darkCyan;
+    font-weight: 700;
+}
+
+.small-price {
+    text-decoration: line-through;
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        flex-direction: row;
+        width: 1000px;
+        height: 400px;
+        }
+
+    img {
+        content: url(images/image-product-desktop.jpg);
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .img-container {
+        flex-basis: 50%;
+    }
+
+    .content {
+        flex-basis: 50%;
+    }
+}
